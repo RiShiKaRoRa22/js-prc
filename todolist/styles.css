@@ -1,0 +1,17 @@
+.listdis{
+    background-color: aqua;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    text-align: center;
+    color: #333;
+    border-radius: 5px;
+
+
+}
