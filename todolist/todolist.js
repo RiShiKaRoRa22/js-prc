@@ -15,17 +15,25 @@ function addbutton(){
 
 }
 
+function deletebtn(index){
+    todoList.splice(index, 1);
+    alert("task deleted");
+
+
+}
+
 function displayList(){
     var list= '';
     if(todoList.length===0){
         alert("no tasks to display");
+        document.querySelector(".listdis").innerHTML=list;
         return;
     }
     else{
         
         for(var i=0;i<todoList.length;i++){
             var item= todoList[i];
-            var listitem= `<p>${item}</p>`;
+            var listitem= `<p>${item} <button class="delbtn" onclick="deletebtn(${i})"> delete  </button></p>`;
             list=list+listitem;
 
         }
