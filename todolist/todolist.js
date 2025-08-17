@@ -3,13 +3,16 @@ var todoList=[];
 function addbutton(){
     var input= document.querySelector(".input-box");
     var inputValue = input.value;
+    var dateInput = document.querySelector(".datebox");
+    var dueDateValue = dateInput.value;
     if(inputValue===""){
         alert("please enter a valid task");
     }
     else{
-        todoList.push(inputValue);
+        todoList.push({task:inputValue, dueDate:dueDateValue});
         alert("task added");
         input.value="";
+        
     }
     return;
 
@@ -32,8 +35,10 @@ function displayList(){
     else{
         
         for(var i=0;i<todoList.length;i++){
-            var item= todoList[i];
-            var listitem= `<p>${item} <button class="delbtn" onclick="deletebtn(${i})"> delete  </button></p>`;
+            var itemObj= todoList[i];
+            const itemObjTask= itemObj.task;
+            const itemObjDueDate= itemObj.dueDate;
+            var listitem= `<p>${itemObjTask} ${itemObjDueDate} <button class="delbtn" onclick="deletebtn(${i})"> delete  </button></p>`;
             list=list+listitem;
 
         }
