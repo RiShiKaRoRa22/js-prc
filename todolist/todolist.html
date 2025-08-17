@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>to do list</title>
+    <script src="todolist.js">  </script>
 </head>
 <body>
     <h1>to do list</h1>
-    <input type="text" class="input-box" placeholder="add task" onkeydown="if(event.key==='Enter'){addbutton()}">
-    <input type="date" class="datebox" >
-    <button class="addbtn" onclick="addbutton()" > add</button>
-    <button class="displaybtn" onclick="displayList()">display the list</button>
-
+    <div class="todoinputgrid"></div>
+        <input type="text" class="input-box" placeholder="add task" onkeydown="if(event.key==='Enter'){addbutton()}">
+        <input type="date" class="datebox" >
+        <button class="addbtn" onclick="addbutton()" > add</button>
+        <button class="displaybtn" onclick="displayList()">display the list</button>
+    </div>
     <div class="listdis"></div>
+
+    
     
 </body>
 <link rel="stylesheet" href="styles.css">
-<script src="todolist.js">  </script>
+
 </html>

@@ -38,7 +38,7 @@ function displayList(){
             var itemObj= todoList[i];
             const itemObjTask= itemObj.task;
             const itemObjDueDate= itemObj.dueDate;
-            var listitem= `<p>${itemObjTask} ${itemObjDueDate} <button class="delbtn" onclick="deletebtn(${i})"> delete  </button></p>`;
+            var listitem= `<div>${itemObjTask} </div> <div>${itemObjDueDate}</div> <button class="delbtn" onclick="deletebtn(${i})"> delete  </button>`;
             list=list+listitem;
 
         }
